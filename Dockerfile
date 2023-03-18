@@ -4,7 +4,7 @@ RUN apt update
 RUN apt -y install apache2
 RUN apt install apache2-utils
 RUN apt update
-RUN apt install software-properties-common
+RUN apt install software-properties-common -y
 RUN apt-add-repository ‘deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main’
 RUN apt update
 RUN add-apt-repository ppa:ondrej/php -y
