@@ -14,5 +14,5 @@ RUN apt -y install libapache2-mod-php7.4
 RUN apt update
 COPY . /var/www/html/Employee-Management-System
 EXPOSE 80
-COPY /etc/apache2/apache2.conf  /etc/apache2/
+COPY /etc/apache2/apache2.conf  /etc/apache2/apache2.conf
 CMD /usr/sbin/apachectl -DFOREGROUND
