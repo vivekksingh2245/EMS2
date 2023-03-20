@@ -13,7 +13,5 @@ RUN apt -y install php7.4-mysql
 RUN apt -y install libapache2-mod-php7.4
 RUN apt update
 COPY /var/www/html/Employee-Management-System /var/www/html/
-WORKDIR /etc/apache2 
-COPY . .
 EXPOSE 80
 CMD /usr/sbin/apachectl -DFOREGROUND
