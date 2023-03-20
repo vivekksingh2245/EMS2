@@ -27,4 +27,5 @@ RUN cp -R /apache-conf/sites-available/* /etc/apache2/sites-available/
 
 COPY . /var/www/html/Employee-Management-System
 EXPOSE 80
-CMD /usr/sbin/apachectl -DFOREGROUND
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+#CMD /usr/sbin/apachectl -DFOREGROUND
