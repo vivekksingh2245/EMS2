@@ -12,7 +12,19 @@ RUN apt install php7.4 php7.4-cli php7.4-fpm php7.4-json php7.4-common php7.4-my
 RUN apt -y install php7.4-mysql
 RUN apt -y install libapache2-mod-php7.4
 RUN apt update
+# Create a directory to hold the Apache configuration files
+RUN mkdir /apache-conf
+
+# Copy the Apache configuration files from the host machine to the build context
+COPY apache2.conf /apache-conf/
+COPY ports.conf /apache-conf/
+COPY sites-available/ /apache-conf/sites-available/
+
+# Copy the Apache configuration files from the build context to the Docker image
+RUN cp /apache-conf/apache2.conf /etc/apache2/
+RUN cp /apache-conf/ports.conf /etc/apache2/
+RUN cp -R /apache-conf/sites-available/* /etc/apache2/sites-available/
+
 COPY . /var/www/html/Employee-Management-System
-COPY /etc/apache2/ /etc/apache2/
 EXPOSE 80
 CMD /usr/sbin/apachectl -DFOREGROUND
