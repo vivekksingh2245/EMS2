@@ -15,4 +15,5 @@ RUN apt update
 COPY . /var/www/html/Employee-Management-System
 EXPOSE 80
 COPY apache2.conf /etc/apache2/
+COPY 000-default.conf /etc/apache2/sites-enabled
 CMD /usr/sbin/apachectl -DFOREGROUND
