@@ -1,4 +1,4 @@
 FROM mysql:8.0.32-debian
 ENV MYSQL_DATABASE test
-COPY test1.sql/docker-entrypoint-initdb.d/
+COPY test1.sql /docker-entrypoint-initdb.d/
 EXPOSE 3306
