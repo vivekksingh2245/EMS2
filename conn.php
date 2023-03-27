@@ -1,6 +1,6 @@
 <?php
 
-$conn=mysqli_connect('172.17.0.4','root','new_password','test');
+$conn=mysqli_connect('my-mysql','root','new_password','test');
 
 
 ?>
