@@ -38,7 +38,7 @@ body{
 <body>
 <br>
 <div>
-<h2 class="text-white"><center><font size="10">Employee Management System</font></center></h2>
+<h2 class="text-white"><center><font size="10">ITOM CPG Team</font></center></h2>
 
 </div><br>
 
